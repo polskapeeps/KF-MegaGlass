@@ -325,15 +325,13 @@ body {
   box-shadow: 0 25px 70px rgba(59, 130, 246, 0.2);
 }
 
-/* FIXED: Remove blue overlay from gallery images on hover */
 .gallery-item::after {
-  display: none !important; /* Completely remove the blue overlay */
+  display: none !important;
 }
 
-/* Alternative: If you want to keep some hover effect but not blue */
 .gallery-item:hover::after {
-  background: rgba(0, 0, 0, 0.1) !important; /* Subtle dark overlay instead */
-  opacity: 0 !important; /* Or just make it invisible */
+  background: rgba(0, 0, 0, 0.1) !important;
+  opacity: 0 !important;
 }
 
 /* ==================== CONTACT SECTION ==================== */
