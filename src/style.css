@@ -607,3 +607,6 @@ button:focus {
     background: rgba(255, 255, 255, 0.15) !important;
   }
 }
+.indented {
+  text-indent: 2em;
+}
