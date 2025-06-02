@@ -1,0 +1,609 @@
+/* Base body styles */
+body {
+  font-family: 'Inter', sans-serif; /* Ensure Inter font is primary */
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+/* Hero section background image with overlay */
+/* REPLACE the existing .hero-bg section in your style.css with this: */
+
+/* Hero section with slideshow background */
+.hero-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+/* Slideshow container */
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2; /* Behind the overlay and content */
+}
+
+/* Individual slide backgrounds */
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+/* Active slide */
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* Dark overlay for better text readability */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
+  z-index: -1; /* Above slides, below content */
+}
+
+/* Add your slide images here - easily customizable */
+.hero-slide:nth-child(1) {
+  background-image: url('assets/hero/railings.jpg'); /* Your existing image */
+}
+
+.hero-slide:nth-child(2) {
+  background-image: url('assets/hero/shower-5.jpg');
+}
+
+.hero-slide:nth-child(3) {
+  background-image: url('assets/hero/shower-2.jpg');
+}
+
+.hero-slide:nth-child(4) {
+  background-image: url('assets/hero/variety.jpg');
+}
+
+.hero-slide:nth-child(5) {
+  background-image: url('assets/hero/balustrade.jpg');
+}
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .hero-slide {
+    background-attachment: scroll;
+  }
+}
+
+/* Optional: Slideshow indicators (dots) */
+.slideshow-indicators {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.indicator.active {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Desktop dropdown menu visibility on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out; /* Faster transitions */
+}
+
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px); /* Start slightly lower for animation */
+}
+
+/* Custom scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px; /* Slightly wider scrollbar */
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a202c; /* Even darker gray for track (gray-900 from Tailwind) */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a5568; /* gray-600 from Tailwind */
+  border-radius: 5px; /* Rounded scrollbar thumb */
+  border: 2px solid #1a202c; /* Creates a small border around thumb, matching track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #718096; /* gray-500 from Tailwind */
+}
+
+/* Enhanced service card hover effect */
+.service-card {
+  transition: all 0.3s ease-in-out; /* Smoother transition for all properties */
+}
+
+.service-card:hover {
+  transform: translateY(-8px); /* Lifts the card up slightly on hover */
+  /* The hover:shadow-blue-500/30 class from Tailwind will handle the shadow change */
+}
+
+/* Style for the mobile products dropdown arrow rotation */
+#mobile-products-button[aria-expanded='true'] svg {
+  transform: rotate(180deg);
+}
+
+/* NEW: Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* NEW: Floating animation for CTA button */
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* NEW: Gallery hover effects */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(59, 130, 246, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: none !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item:hover::after {
+  background: rgba(0, 0, 0, 0.1) !important;
+  opacity: 1;
+}
+
+/* NEW: Enhanced contact section */
+.contact-card {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  /* Affects screens smaller than md breakpoint */
+  .hero-bg {
+    background-attachment: 'scroll'; /* Or 'local', or just remove fixed */
+  }
+
+  /* NEW: Better mobile spacing */
+  .service-card {
+    padding: 1.5rem; /* Slightly less padding on mobile */
+  }
+
+  .gallery-item img {
+    height: 16rem; /* Consistent height on mobile */
+  }
+}
+
+/* NEW: Enhanced transitions for better UX */
+a,
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* NEW: Focus states for accessibility */
+a:focus,
+button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* NEW: Improved hover states */
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* NEW: Better backdrop blur support */
+@supports (backdrop-filter: blur(10px)) {
+  .backdrop-blur-header {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+/* NEW: Enhanced shadow system */
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.shadow-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+}
+@media (max-width: 767px) {
+  .mobile-max-contrast .glass-card-hero p {
+    /* Ultra-strong text shadow with white glow */
+    text-shadow: 2px 2px 0px black, -2px -2px 0px black, 2px -2px 0px black,
+      -2px 2px 0px black, 1px 1px 0px black, -1px -1px 0px black,
+      1px -1px 0px black, -1px 1px 0px black, 4px 4px 8px black,
+      0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3) !important;
+
+    color: white !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px; /* Slight letter spacing for clarity */
+  }
+}
+/* ==================== BOTTOM SECTIONS UPGRADE ==================== */
+
+/* Make ALL sections match the hero's visual quality */
+
+/* About Section - Glass Card Styling */
+#about .glass-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+/* Services Section - Upgrade the Header */
+#services .glass-card-strong {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Service Cards - Make them glass AF */
+.service-card {
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4), 0 0 40px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Gallery Section - Match the premium look */
+#gallery .glass-card-strong {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Gallery Items - Enhanced glass effect */
+.gallery-item {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.gallery-item:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  transform: scale(1.03) rotate(0.5deg);
+  box-shadow: 0 25px 70px rgba(59, 130, 246, 0.2);
+}
+
+/* Remove that blue overlay we don't like */
+.gallery-item::after {
+  display: none !important;
+}
+
+/* Contact Section - Premium glass card */
+.contact-card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4) !important;
+}
+
+#contact .glass-card-strong {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer - Glass treatment */
+footer {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ==================== BOTTOM SECTIONS UPGRADE ==================== */
+
+/* Make ALL sections match the hero's visual quality */
+
+/* About Section - Glass Card Styling */
+#about .glass-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+/* Services Section - Upgrade the Header */
+#services .glass-card-strong {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Service Cards - Make them glass AF */
+.service-card {
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4), 0 0 40px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Gallery Section - Match the premium look */
+#gallery .glass-card-strong {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Gallery Items - Enhanced glass effect */
+.gallery-item {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.gallery-item:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  transform: scale(1.03) rotate(0.5deg);
+  box-shadow: 0 25px 70px rgba(59, 130, 246, 0.2);
+}
+
+/* Remove that blue overlay we don't like */
+.gallery-item::after {
+  display: none !important;
+}
+
+/* Contact Section - Premium glass card */
+.contact-card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4) !important;
+}
+
+#contact .glass-card-strong {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer - Glass treatment */
+footer {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ==================== VISUAL CONSISTENCY UPGRADES ==================== */
+
+/* Make all section backgrounds consistent */
+#about,
+#services,
+#gallery,
+#contact {
+  position: relative;
+}
+
+/* Add subtle floating shapes to other sections too */
+#about::before,
+#services::before,
+#gallery::before,
+#contact::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(
+    45deg,
+    rgba(59, 130, 246, 0.03),
+    rgba(29, 78, 216, 0.03)
+  );
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+#services::before {
+  top: 60%;
+  left: 10%;
+  background: linear-gradient(
+    45deg,
+    rgba(96, 165, 250, 0.03),
+    rgba(59, 130, 246, 0.03)
+  );
+}
+
+/* Make sure content stays above the shapes */
+#about > .container,
+#services > .container,
+#gallery > .container,
+#contact > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== ENHANCED ANIMATIONS ==================== */
+
+/* Add staggered fade-in for service cards */
+.service-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.service-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.service-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.service-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.service-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Gallery items staggered animation */
+.gallery-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.gallery-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.gallery-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.gallery-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.gallery-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.gallery-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* ==================== ICON ENHANCEMENTS ==================== */
+
+/* Make service icons more premium */
+.service-card .bg-gradient-to-br {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .bg-gradient-to-br {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 35px rgba(59, 130, 246, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Contact icons - glass treatment */
+.contact-card .glass-card {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(59, 130, 246, 0.2) !important;
+  transition: all 0.3s ease;
+}
+
+.contact-card .glass-card:hover {
+  background: rgba(59, 130, 246, 0.1) !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  transform: scale(1.05);
+}
+
+/* ==================== QUICK MOBILE FIXES ==================== */
+
+@media (max-width: 767px) {
+  .service-card {
+    background: rgba(
+      255,
+      255,
+      255,
+      0.08
+    ) !important; /* Slightly more opaque on mobile */
+  }
+
+  .gallery-item {
+    background: rgba(255, 255, 255, 0.06) !important;
+  }
+}

@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KF Megaglass - Frameless Glass Solutions</title>
+    <meta
+      name="description"
+      content="Modern frameless glass solutions for shower enclosures, railings, balustrades, door systems, and partition systems. Residential and Commercial."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.kfmegaglass.com/" />
+    <meta
+      property="og:title"
+      content="KF Megaglass - Frameless Glass Solutions"
+    />
+    <meta
+      property="og:description"
+      content="Premium frameless glass for showers, doors, railings, and partitions. Serving residential and commercial clients with cutting-edge technology and superior craftsmanship."
+    />
+    <meta
+      property="og:image"
+      content="https://www.kfmegaglass.com/assets/kf-mega-logo-preview.png"
+    />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.kfmegaglass.com/" />
+    <meta
+      property="twitter:title"
+      content="KF Megaglass - Frameless Glass Solutions"
+    />
+    <meta
+      property="twitter:description"
+      content="Premium frameless glass for showers, doors, railings, and partitions."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.kfmegaglass.com/assets/kf-mega-logo-preview.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fixes.css" />
+    <link rel="icon" href="assets\icons\favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      href="assets/icons/apple-touch-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="assets/icons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/icons/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/icons/android-chrome-512x512.png"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "KF Megaglass",
+        "image": "assets/kf-mega-logo.png",
+        "@id": "https://www.kfmegaglass.com/",
+        "url": "https://www.kfmegaglass.com/",
+        "telephone": "+1-267-252-4314",
+        "description": "KF® Megaglass offers unlimited frameless glass solutions using cutting-edge technology and superior craftsmanship. We specialize in frameless shower enclosures, glass doors, partitions, and clamping systems.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Glass Street",
+          "addressLocality": "Philadelphia",
+          "addressRegion": "PA",
+          "postalCode": "19123",
+          "addressCountry": "US"
+        },
+        "priceRange": "$$$",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "17:00"
+          }
+        ],
+        "areaServed": {
+          "@type": "GeoShape",
+          "description": "Serving Philadelphia and surrounding areas."
+        }
+      }
+    </script>
+  </head>
+
+  <body class="bg-slate-900 text-gray-200 antialiased font-inter">
+    <!-- Background shapes -->
+    <div class="bg-shapes fixed inset-0 pointer-events-none">
+      <div class="bg-shape bg-shape-1"></div>
+      <div class="bg-shape bg-shape-2"></div>
+      <div class="bg-shape bg-shape-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="glass-header fixed top-0 z-50 w-full">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-24">
+          <div class="flex-shrink-0">
+            <a href="#" class="text-2xl font-bold text-white">
+              <!-- Keep your existing logo, but add glass card wrapper -->
+              <div class="glass-card-nav rounded-lg px-4 py-2">
+                <img
+                  src="assets/brand-logo.png"
+                  alt="KF Megaglass Logo"
+                  class="h-12 rounded-md"
+                  onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <!-- Fallback logo -->
+                <div
+                  class="h-12 w-48 rounded-md items-center justify-center hidden"
+                >
+                  <span class="gradient-text font-bold text-xl"
+                    >KF Megaglass</span
+                  >
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex space-x-2">
+            <a
+              href="#"
+              class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+              >Home</a
+            >
+
+            <div class="relative dropdown group">
+              <button
+                class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium inline-flex items-center transition-all duration-200"
+                aria-haspopup="true"
+                aria-expanded="false"
+                id="desktop-products-button"
+                aria-controls="desktop-products-menu"
+              >
+                Products
+                <svg
+                  class="w-4 h-4 ml-1 transition-transform duration-200"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                id="desktop-products-menu"
+                class="dropdown-menu absolute left-0 top-full mt-2 w-56 glass-dropdown rounded-xl shadow-xl z-20 py-2 opacity-0 invisible transform translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0"
+                role="menu"
+              >
+                <a
+                  href="#shower-enclosures"
+                  class="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200 rounded-lg mx-2"
+                  role="menuitem"
+                  >Shower Enclosures</a
+                >
+                <a
+                  href="#glass-doors"
+                  class="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200 rounded-lg mx-2"
+                  role="menuitem"
+                  >Frameless Glass Doors</a
+                >
+                <a
+                  href="#partitions"
+                  class="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200 rounded-lg mx-2"
+                  role="menuitem"
+                  >Partition Systems</a
+                >
+                <a
+                  href="#hardware"
+                  class="block px-4 py-3 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200 rounded-lg mx-2"
+                  role="menuitem"
+                  >Hardware</a
+                >
+              </div>
+            </div>
+
+            <a
+              href="#gallery"
+              class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+              >Gallery</a
+            >
+            <a
+              href="#railings"
+              class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+              >Railings</a
+            >
+            <a
+              href="#contact"
+              class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+              >Contact Us</a
+            >
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="glass-nav-item hover-glass-nav p-2 rounded-lg transition-colors duration-200"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="h-6 w-6"
+                stroke="currentColor"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden glass-dropdown border-t border-gray-700/30"
+      >
+        <a
+          href="#"
+          class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
+          >Home</a
+        >
+        <div class="relative">
+          <button
+            id="mobile-products-button"
+            class="w-full text-left block py-3 px-4 text-base text-gray-200 hover:bg-white/10 flex justify-between items-center transition-colors duration-200"
+            aria-expanded="false"
+            aria-controls="mobile-products-menu"
+          >
+            Products
+            <svg
+              class="w-5 h-5 inline transform transition-transform duration-200"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <div id="mobile-products-menu" class="hidden pl-4 bg-gray-750/50">
+            <a
+              href="#shower-enclosures"
+              class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
+              >Shower Enclosures</a
+            >
+            <a
+              href="#glass-doors"
+              class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
+              >Frameless Glass Doors</a
+            >
+            <a
+              href="#partitions"
+              class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
+              >Partition Systems</a
+            >
+        </div>
+        <a
+          href="#gallery"
+          class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
+          >Gallery</a
+        >
+        <a
+          href="#railings"
+          class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
+          >Railings</a
+        >
+        <a
+          href="#contact"
+          class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
+          >Contact Us</a
+        >
+      </div>
+    </header>
+
+    <main class="relative z-10">
+      <!-- Hero Section with Slideshow -->
+      <section class="hero-bg text-white py-32 md:py-48 relative">
+        <!-- Slideshow Background -->
+        <div class="hero-slideshow">
+          <div class="hero-slide active"></div>
+          <div class="hero-slide"></div>
+          <div class="hero-slide"></div>
+          <div class="hero-slide"></div>
+          <div class="hero-slide"></div>
+        </div>
+
+        <!-- Glass overlay for better text readability -->
+        <div class="hero-glass-overlay"></div>
+
+        <!-- Slideshow indicators (dots) with glass effect -->
+        <div class="slideshow-indicators">
+          <div class="indicator glass-indicator active" data-slide="0"></div>
+          <div class="indicator glass-indicator" data-slide="1"></div>
+          <div class="indicator glass-indicator" data-slide="2"></div>
+          <div class="indicator glass-indicator" data-slide="3"></div>
+          <div class="indicator glass-indicator" data-slide="4"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div
+          class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
+        >
+          <!-- Main hero card -->
+          <div
+            class="glass-card-hero stack-layer rounded-3xl p-12 max-w-5xl mx-auto float-1 mb-8"
+          >
+            <h1
+              class="text-5xl sm:text-6xl md:text-7xl font-bold mb-8 leading-tight"
+            >
+              Custom
+              <span class="gradient-text">Frameless Glass</span> Solutions
+            </h1>
+            <p
+              class="text-xl sm:text-2xl md:text-3xl mb-12 text-gray-200 max-w-4xl mx-auto leading-relaxed"
+            >
+              Transform your space with premium frameless glass installations.
+              From shower-enclosures to partition systems.
+
+              <br />
+
+              We got you covered with professional craftsmanshp and cutting edge
+              designs.
+            </p>
+            <a
+              href="#contact"
+              class="btn-primary text-white font-semibold py-4 px-12 rounded-full text-lg transition-all duration-300 transform hover:scale-105 inline-block"
+            >
+              Get Free Quote
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-20 md:py-32 relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+              <div class="glass-card stack-layer rounded-2xl p-8">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-8">
+                  About <span class="gradient-text">KF Megaglass</span>
+                </h2>
+                <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+                  <p>
+                    We're proud to be one of the top providers of frameless
+                    glass solutions. What we love about our work is combining
+                    smart technology with precision hardware to create designs
+                    that look amazing and actually function while performing
+                    better.
+                  </p>
+                  <p>
+                    We handle everything from sleek residential shower systems
+                    that give bathrooms a modern upgrade, to large commercial
+                    installations that completely transform business spaces. Our
+                    specialty is creating open, airy environments that maximize
+                    natural light and make spaces feel bigger.
+                  </p>
+                  <p>
+                    No matter what kind of project you're planning, we never
+                    compromise on quality. We use only premium materials,
+                    sourcing the best brass, titanium, and stainless steel on
+                    the market. These materials aren't just strong and long
+                    lasting, they also look incredible.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="order-1 md:order-2">
+              <div class="gallery-item float-2">
+                <img
+                  src="assets/Teamwork-marek.png"
+                  alt="KF Megaglass Craftsmanship"
+                  class="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                  onerror="this.src='https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="py-20 md:py-32 relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-20">
+            <div class="glass-card-strong rounded-2xl p-8 inline-block">
+              <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Our <span class="gradient-text">Services</span>
+              </h2>
+              <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Premium frameless glass solutions tailored to your vision and
+                space
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Shower Enclosures -->
+            <div
+              id="shower-enclosures"
+              class="service-card glass-card stack-layer rounded-2xl p-8 hover-glass transition-all duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-semibold text-white mb-4">
+                Shower Enclosures
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                Custom frameless shower enclosures designed to elevate your
+                bathroom's aesthetics and functionality with crystal-clear glass
+                and premium hardware.
+              </p>
+            </div>
+
+            <!-- Glass Doors -->
+            <div
+              id="glass-doors"
+              class="service-card glass-card stack-layer rounded-2xl p-8 hover-glass transition-all duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8.25 9V7a3.75 3.75 0 117.5 0v2m-7.5 4v6.75A1.25 1.25 0 009.5 21h5a1.25 1.25 0 001.25-1.25V13M8.25 9h7.5a1.25 1.25 0 011.25 1.25V13"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-semibold text-white mb-4">
+                Frameless Glass Doors
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                Sleek and modern frameless glass door systems for residential
+                and commercial spaces that create seamless transitions between
+                areas.
+              </p>
+            </div>
+
+            <!-- Partitions -->
+            <div
+              id="partitions"
+              class="service-card glass-card stack-layer rounded-2xl p-8 hover-glass transition-all duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-semibold text-white mb-4">
+                Partition Systems
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                Elegant glass partition systems to define and enhance office and
+                living areas while maintaining an open, collaborative
+                atmosphere.
+              </p>
+            </div>
+
+            <!-- Railings -->
+            <div
+              id="railings"
+              class="service-card glass-card stack-layer rounded-2xl p-8 hover-glass transition-all duration-300"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 4h18M3 8h18M3 12h18M3 16h18M3 20h18"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-semibold text-white mb-4">
+                Glass Railings
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                Stylish and durable glass railings for stairs, balconies, and
+                pools, ensuring safety with a modern touch that doesn't obstruct
+                views.
+              </p>
+            </div>
+
+            <!-- Hardware - Spanning 2 columns -->
+            <div
+              id="hardware"
+              class="service-card glass-card stack-layer rounded-2xl p-8 hover-glass transition-all duration-300 md:col-span-2 lg:col-span-2"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-semibold text-white mb-4">
+                Premium Hardware
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                We use only the finest quality materials including solid German
+                brass, titanium, and stainless steel for all our fittings and
+                hardware. This ensures longevity and a premium finish that will
+                last for decades while maintaining its stunning appearance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="py-20 md:py-32 relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-20">
+            <div class="glass-card-strong rounded-2xl p-8 inline-block">
+              <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Our <span class="gradient-text">Portfolio</span>
+              </h2>
+              <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Discover our latest projects showcasing precision craftsmanship
+                and innovative design
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Keep your existing images but add glass styling -->
+            <div class="gallery-item">
+              <img
+                src="https://nebula.wsimg.com/beeb9302320b74a215fcc330087f5627?AccessKeyId=88FADA07FC6AA0CD0591&disposition=0&alloworigin=1"
+                onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
+                alt="Frameless Shower Enclosure"
+                class="w-full h-80 object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://nebula.wsimg.com/d8bf58688f5c832ff6a7b0766062b03e?AccessKeyId=88FADA07FC6AA0CD0591&disposition=0&alloworigin=1"
+                onerror="this.src='https://images.unsplash.com/photo-1571708655418-b2b1c510a7db?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
+                alt="Glass Door Installation"
+                class="w-full h-80 object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://nebula.wsimg.com/8533415c96b1fd923cc60288eb84673d?AccessKeyId=88FADA07FC6AA0CD0591&disposition=0&alloworigin=1"
+                onerror="this.src='https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
+                alt="Glass Partition System"
+                class="w-full h-80 object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://nebula.wsimg.com/791ee20fe8aa87186fc2fd2cd029bb90?AccessKeyId=88FADA07FC6AA0CD0591&disposition=0&alloworigin=1"
+                onerror="this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
+                alt="Custom Glass Railing"
+                class="w-full h-80 object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://nebula.wsimg.com/b9ed1ed0f3b7bdd1b2110a94056cb27d?AccessKeyId=88FADA07FC6AA0CD0591&disposition=0&alloworigin=1"
+                onerror="this.src='https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
+                alt="Commercial Glass Installation"
+                class="w-full h-80 object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://nebula.wsimg.com/605c74c40f678d848ce114b5d011a976?AccessKeyId=88FADA07FC6AA0CD0591&disposition=0&alloworigin=1"
+                onerror="this.src='https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
+                alt="Residential Glass Door"
+                class="w-full h-80 object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 md:py-32 relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-20">
+            <div class="glass-card-strong rounded-2xl p-8 inline-block">
+              <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Get In <span class="gradient-text">Touch</span>
+              </h2>
+              <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Ready to transform your space? Let's discuss your project and
+                bring your vision to life.
+              </p>
+            </div>
+          </div>
+
+          <div class="max-w-2xl mx-auto">
+            <div class="contact-card stack-layer rounded-3xl p-10 shadow-2xl">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="text-center">
+                  <div
+                    class="glass-card w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+                  >
+                    <svg
+                      class="w-8 h-8 text-blue-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.308 1.154a11.06 11.06 0 006.086 6.086l1.154-2.308a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-lg font-semibold text-white mb-2">
+                    Radek(Owner)
+                  </h3>
+                  <a
+                    href="tel:2672435478"
+                    class="text-blue-400 hover:text-blue-300 text-xl font-medium transition-colors duration-200"
+                  >
+                    (267) 243-5478
+                  </a>
+                </div>
+
+                <div class="text-center">
+                  <div
+                    class="glass-card w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+                  >
+                    <svg
+                      class="w-8 h-8 text-blue-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.308 1.154a11.06 11.06 0 006.086 6.086l1.154-2.308a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-lg font-semibold text-white mb-2">
+                    Marek(Co-Owner)
+                  </h3>
+                  <a
+                    href="tel:2672524314"
+                    class="text-blue-400 hover:text-blue-300 text-xl font-medium transition-colors duration-200"
+                  >
+                    (267) 252-4314
+                  </a>
+                </div>
+              </div>
+
+              <div class="text-center border-t border-gray-700/50 pt-8">
+                <div
+                  class="glass-card w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <svg
+                    class="w-8 h-8 text-blue-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <a
+                  href="mailto:info@kfmegaglass.com"
+                  class="text-blue-400 hover:text-blue-300 text-xl font-medium transition-colors duration-200"
+                >
+                  info@kfmegaglass.com
+                </a>
+              </div>
+
+              <p class="text-center text-gray-400 text-sm mt-8 leading-relaxed">
+                Serving residential and commercial clients with premium glass in
+                Philadelphia and surrounding areas. Free consultations
+                available.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card border-t border-gray-700/30 py-12 relative">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="mb-8">
+          <a
+            href="https://www.facebook.com/pages/KF-Megaglass-Shower-Enclosures/208668755897730"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="glass-card inline-flex items-center justify-center w-12 h-12 rounded-full hover-glass transition-colors duration-300"
+            aria-label="KF Megaglass on Facebook"
+          >
+            <svg
+              class="w-6 h-6 text-blue-400"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="text-gray-400 text-sm mb-2">
+          &copy; 2013 - <span id="currentYear"></span> KF Megaglass - Frameless
+          Glass Solutions. All Rights Reserved.
+        </p>
+        <p class="text-gray-500 text-xs">Website by PK Designs</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
