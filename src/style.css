@@ -177,6 +177,14 @@ body {
     -1px 1px 0px rgba(0, 0, 0, 0.9), 4px 4px 8px rgba(0, 0, 0, 0.8),
     0 0 20px rgba(59, 130, 246, 0.6) !important; /* Blue glow */
 }
+.glass-card-hero p .gradient-text {
+  /* Add custom text-shadow properties here if desired */
+  /* For example, to give it a subtle glow similar to the h1, but perhaps less intense: */
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.195),
+    -1px -1px 0px rgba(57, 132, 185, 0.7), 1px -1px 0px rgba(33, 12, 137, 0.7),
+    -1px 1px 0px rgba(0, 0, 0, 0.7), 2px 2px 4px rgba(0, 0, 0, 0.6),
+    0 0 10px rgba(59, 130, 246, 0.4) !important;
+}
 
 /* Make the hero card background more refined */
 .glass-card-hero {
