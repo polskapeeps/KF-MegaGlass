@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (heroSection) {
     window.addEventListener('scroll', () => {
       const scrolled = window.pageYOffset;
-      const rate = scrolled * -0.3; // Reduced rate for subtlety
+      const rate = scrolled * -0.2; // Reduced rate for subtlety
 
       // Only apply on larger screens to avoid performance issues on mobile
       if (window.innerWidth > 768) {
