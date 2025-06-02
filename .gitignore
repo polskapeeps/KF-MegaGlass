@@ -3,3 +3,5 @@
 *.old
 .dev/
 og.*
+
+node_modules/
