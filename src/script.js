@@ -45,13 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Pause slideshow on hover (optional)
-    const heroSection = document.querySelector('.hero-bg');
-    if (heroSection) {
-      heroSection.addEventListener('mouseenter', stopSlideshow);
-      heroSection.addEventListener('mouseleave', startSlideshow);
-    }
-
     // Start the slideshow
     startSlideshow();
 
