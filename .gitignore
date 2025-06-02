@@ -5,3 +5,4 @@
 og.*
 
 node_modules/
+dist/
