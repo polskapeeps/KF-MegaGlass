@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --dotfiles --git-remote origin",
+    "deploy": "gh-pages -d dist",
     "deploy:clean": "gh-pages-clean && npm run deploy"
   },
   "repository": {
