@@ -275,21 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
           card.style.borderColor = 'rgba(255, 255, 255, 0.1)';
         });
       });
-
-    // Enhanced gallery item interactions
-    document.querySelectorAll('.gallery-item').forEach((item) => {
-      item.addEventListener('mouseenter', () => {
-        item.style.transform = 'scale(1.05) rotate(1deg)';
-        item.style.boxShadow = '0 25px 70px rgba(59, 130, 246, 0.25)';
-      });
-
-      item.addEventListener('mouseleave', () => {
-        item.style.transform = 'scale(1) rotate(0deg)';
-        item.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3)';
-      });
-    });
-  };
-
+  }; // Added closing brace here
   // Initialize dynamic glass effects
   // addDynamicGlassEffects();
 
