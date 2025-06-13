@@ -197,25 +197,20 @@ body {
 
 /* Add your slide images here - easily customizable */
 .hero-slide:nth-child(1) {
-  background-image: url('assets/hero/shower.jpg'); /* Your existing image */
+  background-image: url('./assets/hero/shower.jpg'); /* Or ./assets/hero/shower.jpg */
 }
-
 .hero-slide:nth-child(2) {
-  background-image: url('assets/hero/shower-5.jpg');
+  background-image: url('./assets/hero/shower-5.jpg'); /* Or ./assets/hero/shower-5.jpg */
 }
-
 .hero-slide:nth-child(3) {
-  background-image: url('assets/hero/balustrade.jpg');
+  background-image: url('./assets/hero/balustrade.jpg'); /* Or ./assets/hero/balustrade.jpg */
 }
-
 .hero-slide:nth-child(4) {
-  background-image: url('assets/hero/shower-3.jpg');
+  background-image: url('./assets/hero/shower-3.jpg'); /* Or ./assets/hero/shower-3.jpg */
 }
-
 .hero-slide:nth-child(5) {
-  background-image: url('assets/hero/stair-balustrade.jpg');
+  background-image: url('./assets/hero/stair-balustrade.jpg'); /* Or ./assets/hero/stair-balustrade.jpg */
 }
-
 /* Slideshow indicators (dots) with improved visibility */
 .slideshow-indicators {
   position: absolute;

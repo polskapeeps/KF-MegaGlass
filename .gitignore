@@ -1,6 +1,7 @@
 .old/
 .test/
 *.old
+old.*
 .dev/
 og.*
 
