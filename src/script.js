@@ -291,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // Initialize dynamic glass effects
-  addDynamicGlassEffects();
+  // addDynamicGlassEffects();
 
   // Background shape animation controls
   const controlBackgroundShapes = () => {
