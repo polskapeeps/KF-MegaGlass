@@ -311,9 +311,10 @@ body {
 /* ==================== GALLERY SECTION ==================== */
 
 /* Gallery Items - Enhanced glass effect and fixes */
+/* Gallery Items - Enhanced glass effect and fixes */
 .gallery-item {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1.5rem;
   overflow: hidden;
   transition: all 0.4s ease;
@@ -321,20 +322,39 @@ body {
   cursor: pointer;
 }
 
+/* This ::after pseudo-element will act as our hover overlay */
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  opacity: 0; /* Start fully transparent */
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
 .gallery-item:hover {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border-color: rgba(59, 130, 246, 0.3) !important;
+  border-color: rgba(59, 130, 246, 0.3);
   transform: scale(1.03) rotate(0.5deg);
   box-shadow: 0 25px 70px rgba(59, 130, 246, 0.2);
 }
 
-.gallery-item::after {
-  display: none !important;
+/* On hover, make the overlay visible */
+.gallery-item:hover::after {
+  opacity: 1;
 }
 
-.gallery-item:hover::after {
-  background: rgba(0, 0, 0, 0.1) !important;
-  opacity: 0 !important;
+/* Ensure the image is behind the overlay */
+.gallery-item img {
+  position: relative;
+  z-index: 0;
 }
 
 /* ==================== CONTACT SECTION ==================== */
