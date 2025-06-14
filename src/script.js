@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const initHeroSlideshow = () => {
     const slides = document.querySelectorAll('.hero-slide');
     const indicators = document.querySelectorAll('.indicator');
+    if (slides.length === 0) {
+      return; // Skip initialization when slideshow elements are absent
+    }
     let currentSlide = 0;
     let slideInterval;
 
