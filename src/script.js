@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to start automatic slideshow
     const startSlideshow = () => {
-      slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+      slideInterval = setInterval(nextSlide, 8000); // Change slide every 8 seconds
     };
 
     // Function to stop automatic slideshow
