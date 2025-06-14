@@ -13,13 +13,7 @@ export default defineConfig({
         'glass-doors': resolve(__dirname, 'glass-doors.html'),
         partitions: resolve(__dirname, 'partitions.html'),
         railings: resolve(__dirname, 'railings.html'),
-        hardware: resolve(__dirname, 'hardware.html'),
         'shower-enclosures': resolve(__dirname, 'shower-enclosures.html'),
-        'frameless-glass-doors': resolve(
-          __dirname,
-          'frameless-glass-doors.html'
-        ),
-        'partition-systems': resolve(__dirname, 'partition-systems.html'),
       },
       output: {
         assetFileNames: 'assets/[name]-[hash].[ext]',
