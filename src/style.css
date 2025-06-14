@@ -729,3 +729,40 @@ button:focus {
 .indented {
   text-indent: 2em;
 }
+/* ==================== MOBILE MENU CLEAR GLASS EFFECT ==================== */
+
+/* Mobile menu - same clear glass effect as desktop dropdown */
+#mobile-menu {
+  background: rgba(255, 255, 255, 0.05) !important; /* Same as glass-card */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile menu items - clean and clear */
+#mobile-menu a,
+#mobile-menu button {
+  background: transparent !important;
+  border: none !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 500 !important;
+}
+
+/* Subtle hover effect - same as desktop */
+#mobile-menu a:hover,
+#mobile-menu button:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px;
+}
+
+/* Contact info section - subtle glass effect */
+#mobile-menu .border-b {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Mobile products submenu - clear glass */
+#mobile-products-menu {
+  background: rgba(255, 255, 255, 0.03) !important;
+}
