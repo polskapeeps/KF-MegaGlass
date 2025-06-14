@@ -46,11 +46,19 @@
       sizes="512x512"
       href="assets/icons/android-chrome-512x512.png"
     />
-    <script type="module" crossorigin src="/KF-MegaGlass/assets/script-DJtVVrRr.js"></script>
-    <link rel="stylesheet" crossorigin href="/KF-MegaGlass/assets/script-BgFdlbIy.css">
+    <script type="module" crossorigin src="/KF-MegaGlass/assets/script-DU3RVFka.js"></script>
+    <link rel="stylesheet" crossorigin href="/KF-MegaGlass/assets/script-DTHMuKNc.css">
   </head>
 
   <body class="bg-slate-900 text-gray-200 antialiased font-inter">
+    <!-- Background shapes -->
+    <div class="bg-shapes fixed inset-0 pointer-events-none">
+      <div class="bg-shape bg-shape-1"></div>
+      <div class="bg-shape bg-shape-2"></div>
+      <div class="bg-shape bg-shape-3"></div>
+    </div>
+
+    <!-- Header -->
     <header class="glass-header fixed top-0 z-50 w-full">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-24">
@@ -157,12 +165,12 @@
               </div>
 
               <a
-                href="#gallery"
+                href="index.html#gallery"
                 class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
                 >Gallery</a
               >
               <a
-                href="#contact"
+                href="index.html#contact"
                 class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
                 >Contact Us</a
               >
@@ -337,107 +345,159 @@
               <a
                 href="glass-doors.html"
                 class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
-                >Frameless Glass Doors</a
+                >Glass Doors</a
               >
               <a
                 href="partitions.html"
                 class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
                 >Partition Systems</a
               >
+              <a
+                href="railings.html"
+                class="block py-3 px-4 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-200"
+                >Railings</a
+              >
             </div>
-            <!-- This closes the div.relative for mobile products dropdown -->
           </div>
           <a
-            href="#gallery"
+            href="index.html#gallery"
             class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
             >Gallery</a
           >
           <a
-            href="railings.html"
-            class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
-            >Railings</a
-          >
-          <a
-            href="#contact"
+            href="index.html#contact"
             class="block py-3 px-4 text-base text-gray-200 hover:bg-white/10 transition-colors duration-200"
             >Contact Us</a
           >
         </div>
-        <main class="pt-32 pb-16">
-          <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-card-strong rounded-2xl p-8">
-              <h1 class="text-4xl font-bold mb-4">Shower Enclosures</h1>
-              <p class="text-lg text-gray-300">More information coming soon.</p>
-            </div>
-          </div>
-        </main>
-        <section class="service-hero shower-hero text-white">
-          <div class="service-hero-content">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <div class="glass-card-hero rounded-3xl p-12 max-w-4xl mx-auto">
-                <h1
-                  class="text-5xl sm:text-6xl md:text-7xl font-bold mb-8 leading-tight"
+    </header>
+
+    <main class="relative z-10">
+      <!-- Service Hero Section -->
+      <section class="service-hero shower-hero text-white">
+        <div class="service-hero-content">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="glass-card-hero rounded-3xl p-12 max-w-4xl mx-auto">
+              <h1
+                class="text-5xl sm:text-6xl md:text-7xl font-bold mb-8 leading-tight"
+              >
+                Premium <span class="gradient-text">Shower Enclosures</span>
+              </h1>
+              <p
+                class="text-xl sm:text-2xl md:text-3xl mb-12 text-gray-200 max-w-3xl mx-auto leading-relaxed"
+              >
+                Transform your bathroom with custom
+                <span class="gradient-text">frameless glass</span> shower
+                enclosures designed for elegance and functionality.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="index.html#contact"
+                  class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
                 >
-                  Premium <span class="gradient-text">Shower Enclosures</span>
-                </h1>
-                <p
-                  class="text-xl sm:text-2xl md:text-3xl mb-12 text-gray-200 max-w-3xl mx-auto leading-relaxed"
+                  Get Free Quote
+                </a>
+                <a
+                  href="index.html#gallery"
+                  class="glass-card-strong px-8 py-4 rounded-xl font-semibold hover-glass transition-all duration-300"
                 >
-                  Transform your bathroom with custom
-                  <span class="gradient-text">frameless glass</span> shower
-                  enclosures designed for elegance and functionality.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="#contact"
-                    class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
-                  >
-                    Get Free Quote
-                  </a>
-                  <a
-                    href="#gallery"
-                    class="glass-card-strong px-8 py-4 rounded-xl font-semibold hover-glass transition-all duration-300"
-                  >
-                    View Gallery
-                  </a>
-                </div>
+                  View Gallery
+                </a>
               </div>
             </div>
           </div>
-        </section>
-        <footer class="glass-card border-t border-gray-700/30 py-12 relative">
-          <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="mb-8">
-              <a
-                href="https://www.facebook.com/pages/KF-Megaglass-Shower-Enclosures/208668755897730"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="glass-card inline-flex items-center justify-center w-12 h-12 rounded-full hover-glass transition-colors duration-300"
-                aria-label="KF Megaglass on Facebook"
-              >
-                <svg
-                  class="w-6 h-6 text-blue-400"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </a>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section class="py-20 md:py-32 relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <div class="glass-card stack-layer rounded-2xl p-8">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-8">
+                  Why Choose Our <span class="gradient-text">Shower Enclosures</span>?
+                </h2>
+                <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+                  <p>
+                    Our frameless shower enclosures combine sophisticated design with practical functionality, creating a spa-like experience in your own home.
+                  </p>
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <svg class="w-6 h-6 text-blue-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      <span>Premium tempered glass for safety and durability</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-6 h-6 text-blue-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      <span>Custom measurements to fit any bathroom layout</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-6 h-6 text-blue-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      <span>High-quality hardware with lifetime warranty</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-6 h-6 text-blue-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      <span>Professional installation by certified technicians</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <p class="text-gray-400 text-sm mb-2">
-              &copy; 2013 - <span id="currentYear"></span> KF Megaglass -
-              Frameless Glass Solutions. All Rights Reserved.
-            </p>
-            <p class="text-gray-500 text-xs">Website by PK Designs</p>
+            <div>
+              <div class="gallery-item float-2">
+                <img
+                  src="assets/gallery/shower-2.jpg"
+                  alt="Premium Shower Enclosure"
+                  class="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                  onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';"
+                />
+              </div>
+            </div>
           </div>
-        </footer>
-
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card border-t border-gray-700/30 py-12 relative">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="mb-8">
+          <a
+            href="https://www.facebook.com/pages/KF-Megaglass-Shower-Enclosures/208668755897730"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="glass-card inline-flex items-center justify-center w-12 h-12 rounded-full hover-glass transition-colors duration-300"
+            aria-label="KF Megaglass on Facebook"
+          >
+            <svg
+              class="w-6 h-6 text-blue-400"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="text-gray-400 text-sm mb-2">
+          &copy; 2013 - <span id="currentYear"></span> KF Megaglass -
+          Frameless Glass Solutions. All Rights Reserved.
+        </p>
+        <p class="text-gray-500 text-xs">Website by PK Designs</p>
       </div>
-    </header>
+    </footer>
+
   </body>
 </html>
