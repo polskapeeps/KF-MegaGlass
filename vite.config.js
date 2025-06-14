@@ -1,8 +1,7 @@
-// vite.config.js (IMPORTANT: rename from vite-config.js)
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/KF-MegaGlass/', // Make sure this matches your GitHub repo name exactly
+  base: '/KF-MegaGlass/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
