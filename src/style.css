@@ -290,6 +290,10 @@ body {
 .partitions-hero {
   background-image: url('/assets/gallery/partition_01.jpg');
 }
+/* Railings specific background */
+.railings-hero {
+  background-image: url('/assets/gallery/railing_04.jpg');
+}
 
 /* Dark overlay for text readability */
 .service-hero::before {
