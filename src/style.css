@@ -282,6 +282,10 @@ body {
 .shower-hero {
   background-image: url('/assets/hero/shower-5.jpg');
 }
+/* Glass doors specific background */
+.doors-hero {
+  background-image: url('/assets/hero/balustrade.jpg');
+}
 
 /* Dark overlay for text readability */
 .service-hero::before {
