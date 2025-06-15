@@ -280,7 +280,7 @@ body {
 
 /* Shower enclosures specific background */
 .shower-hero {
-  background-image: url('/assets/gallery/showers_100.jpg');
+  background-image: url('/assets/gallery/showers_33.jpg');
 }
 /* Glass doors specific background */
 .doors-hero {
@@ -295,7 +295,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
   z-index: 1;
 }
 
