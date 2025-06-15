@@ -778,3 +778,21 @@ button:focus {
 #mobile-products-menu {
   background: rgba(255, 255, 255, 0.03) !important;
 }
+.mobile-contact-compact {
+  font-size: 9px;
+  line-height: 1.1;
+}
+
+.mobile-contact-item {
+  display: block;
+  color: rgba(156, 163, 175, 0.9);
+  text-decoration: none;
+  transition: color 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mobile-contact-item:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
