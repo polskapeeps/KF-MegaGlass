@@ -286,6 +286,10 @@ body {
 .doors-hero {
   background-image: url('/assets/gallery/doors_05.jpg');
 }
+/* Partitions specific background */
+.partitions-hero {
+  background-image: url('/assets/gallery/partition_01.jpg');
+}
 
 /* Dark overlay for text readability */
 .service-hero::before {
