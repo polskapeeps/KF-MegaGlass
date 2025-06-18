@@ -481,6 +481,13 @@ const initGalleryEnhancements = () => {
 document.addEventListener('DOMContentLoaded', () => {
   // Only run on gallery page
   if (window.location.pathname.includes('gallery')) {
+    // 1. build the gallery grid
+    const grid = document.querySelector('.gallery-grid');
+    if (grid) {
+      grid.innerHTML = buildGallery();
+    }
+
+    // 2. then wire up your enhancements
     initGalleryEnhancements();
   }
 });
