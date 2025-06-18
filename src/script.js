@@ -325,3 +325,189 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize reduced motion support
   respectReducedMotion();
 });
+
+// Enhanced Gallery Functionality
+const initGalleryEnhancements = () => {
+  // Lazy loading for gallery images
+  const galleryImages = document.querySelectorAll('.gallery-item img');
+
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        if (img.dataset.src) {
+          img.src = img.dataset.src;
+          img.removeAttribute('data-src');
+        }
+        imageObserver.unobserve(img);
+      }
+    });
+  });
+
+  galleryImages.forEach((img) => {
+    imageObserver.observe(img);
+  });
+
+  // Preload critical gallery images
+  const preloadImages = [
+    'assets/gallery/showers_35.jpg',
+    'assets/gallery/shower-2.jpg',
+    'assets/gallery/doors_03.jpg',
+    'assets/gallery/railing_04.jpg',
+  ];
+
+  preloadImages.forEach((src) => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = src;
+    document.head.appendChild(link);
+  });
+
+  // Gallery item hover effects
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  galleryItems.forEach((item) => {
+    item.addEventListener('mouseenter', () => {
+      item.style.transform = 'scale(1.02) translateY(-2px)';
+      item.style.transition = 'transform 0.3s ease';
+    });
+
+    item.addEventListener('mouseleave', () => {
+      item.style.transform = 'scale(1) translateY(0)';
+    });
+  });
+
+  // Smooth category transitions
+  const categoryFilters = document.querySelectorAll('.gallery-filter');
+
+  categoryFilters.forEach((filter) => {
+    filter.addEventListener('click', () => {
+      // Add loading animation
+      const loader = document.createElement('div');
+      loader.innerHTML =
+        '<div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-400 mx-auto my-4"></div>';
+      loader.className = 'gallery-loader';
+
+      const gallery = document.querySelector('.gallery-grid');
+      if (gallery) {
+        gallery.appendChild(loader);
+
+        // Remove loader after transition
+        setTimeout(() => {
+          if (loader.parentNode) {
+            loader.remove();
+          }
+        }, 600);
+      }
+    });
+  });
+
+  // Keyboard navigation for lightbox
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  // Touch gestures for mobile lightbox navigation
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox) {
+    lightbox.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    lightbox.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleGesture();
+    });
+
+    function handleGesture() {
+      const swipeThreshold = 100;
+      if (touchEndX < touchStartX - swipeThreshold) {
+        // Swipe left - next image
+        const nextBtn = document.querySelector('.lightbox-next');
+        if (nextBtn) nextBtn.click();
+      }
+
+      if (touchEndX > touchStartX + swipeThreshold) {
+        // Swipe right - previous image
+        const prevBtn = document.querySelector('.lightbox-prev');
+        if (prevBtn) prevBtn.click();
+      }
+    }
+  }
+
+  // Gallery statistics counter
+  const updateGalleryStats = () => {
+    const totalImages = document.querySelectorAll('.gallery-item').length;
+    const categoryStats = {};
+
+    document.querySelectorAll('[data-category]').forEach((section) => {
+      const category = section.getAttribute('data-category');
+      const count = section.querySelectorAll('.gallery-item').length;
+      categoryStats[category] = count;
+    });
+
+    // You can display these stats somewhere if needed
+    console.log('Gallery Stats:', { total: totalImages, ...categoryStats });
+  };
+
+  updateGalleryStats();
+
+  // Performance optimization for large galleries
+  const optimizeForPerformance = () => {
+    // Reduce motion for users who prefer it
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    );
+
+    if (prefersReducedMotion.matches) {
+      const style = document.createElement('style');
+      style.textContent = `
+        .gallery-item,
+        .gallery-filter,
+        .lightbox-content {
+          transition: none !important;
+          animation: none !important;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  };
+
+  optimizeForPerformance();
+};
+
+// Initialize gallery enhancements when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  // Only run on gallery page
+  if (window.location.pathname.includes('gallery')) {
+    initGalleryEnhancements();
+  }
+});
+
+// Add this CSS for the loading animation (add to your style.css)
+const galleryStyles = `
+.gallery-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  opacity: 0.7;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+`;
+
+// Inject styles if on gallery page
+if (window.location.pathname.includes('gallery')) {
+  const styleSheet = document.createElement('style');
+  styleSheet.textContent = galleryStyles;
+  document.head.appendChild(styleSheet);
+}
