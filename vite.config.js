@@ -10,6 +10,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        gallery: resolve(__dirname, 'gallery.html'),
         'glass-doors': resolve(__dirname, 'glass-doors.html'),
         partitions: resolve(__dirname, 'partitions.html'),
         railings: resolve(__dirname, 'railings.html'),
