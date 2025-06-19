@@ -480,11 +480,17 @@ const initGalleryEnhancements = () => {
 // Initialize gallery enhancements when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.includes('gallery')) {
-    const grid = document.querySelector('.gallery-grid');
-    if (grid) {
-      grid.innerHTML = buildGallery();
-      initGalleryEnhancements(); // now works on your new items!
-    }
+    // 1. build the gallery grid
+    const grids = document.querySelectorAll('[data-category] .gallery-grid');
+    const markup = buildGallery();
+    grids.forEach((grid) => {
+      const section = grid.closest('[data-category]');
+      const category = section ? section.getAttribute('data-category') : '';
+      grid.innerHTML = markup[category] || '';
+    });
+
+    // 2. then wire up your enhancements
+    initGalleryEnhancements();
   }
 });
 
