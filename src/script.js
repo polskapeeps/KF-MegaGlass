@@ -477,6 +477,135 @@ const initGalleryEnhancements = () => {
   optimizeForPerformance();
 };
 
+// Setup filtering and lightbox interactions
+const initGalleryUI = () => {
+  const filterButtons = document.querySelectorAll('.gallery-filter');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const categorySections = document.querySelectorAll('[data-category]');
+
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const filter = button.getAttribute('data-filter');
+
+      filterButtons.forEach((btn) => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      categorySections.forEach((section) => {
+        const category = section.getAttribute('data-category');
+        if (filter === 'all' || filter === category) {
+          section.style.display = 'block';
+          setTimeout(() => {
+            section.classList.add('visible');
+          }, 100);
+        } else {
+          section.classList.remove('visible');
+          setTimeout(() => {
+            section.style.display = 'none';
+          }, 300);
+        }
+      });
+    });
+  });
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.querySelector('.lightbox-close');
+  const lightboxPrev = document.querySelector('.lightbox-prev');
+  const lightboxNext = document.querySelector('.lightbox-next');
+
+  let currentImageIndex = 0;
+  let visibleImages = [];
+
+  function updateVisibleImages() {
+    visibleImages = Array.from(
+      document.querySelectorAll('.gallery-item img')
+    ).filter((img) => {
+      return img.closest('[data-category]').style.display !== 'none';
+    });
+  }
+
+  function openLightbox(index) {
+    updateVisibleImages();
+    currentImageIndex = index;
+    lightboxImg.src = visibleImages[currentImageIndex].src;
+    lightboxImg.alt = visibleImages[currentImageIndex].alt;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  function nextImage() {
+    updateVisibleImages();
+    currentImageIndex = (currentImageIndex + 1) % visibleImages.length;
+    lightboxImg.src = visibleImages[currentImageIndex].src;
+    lightboxImg.alt = visibleImages[currentImageIndex].alt;
+  }
+
+  function prevImage() {
+    updateVisibleImages();
+    currentImageIndex =
+      (currentImageIndex - 1 + visibleImages.length) % visibleImages.length;
+    lightboxImg.src = visibleImages[currentImageIndex].src;
+    lightboxImg.alt = visibleImages[currentImageIndex].alt;
+  }
+
+  galleryItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      updateVisibleImages();
+      const img = item.querySelector('img');
+      const imageIndex = visibleImages.indexOf(img);
+      openLightbox(imageIndex);
+    });
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxNext.addEventListener('click', nextImage);
+  lightboxPrev.addEventListener('click', prevImage);
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('active')) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'ArrowRight') {
+        nextImage();
+      } else if (e.key === 'ArrowLeft') {
+        prevImage();
+      }
+    }
+  });
+
+  categorySections.forEach((section) => {
+    section.classList.add('visible');
+  });
+
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px',
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.fade-in').forEach((el) => {
+    observer.observe(el);
+  });
+};
+
 // Initialize gallery enhancements when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.includes('gallery')) {
@@ -491,6 +620,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. then wire up your enhancements
     initGalleryEnhancements();
+    initGalleryUI();
   }
 });
 
