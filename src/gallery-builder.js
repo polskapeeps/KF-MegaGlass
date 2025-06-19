@@ -5,11 +5,18 @@ export function buildGallery() {
     as: 'url',
   });
 
+  // Map singular file prefixes to the plural category names used in the HTML
+  const prefixMap = {
+    partition: 'partitions',
+    railing: 'railings',
+  };
+
   const categorized = {};
 
   for (const [path, url] of Object.entries(images)) {
     const name = path.split('/').pop() || '';
-    const prefix = name.split('_')[0].toLowerCase();
+    const rawPrefix = name.split('_')[0].toLowerCase();
+    const prefix = prefixMap[rawPrefix] || rawPrefix;
     if (!categorized[prefix]) {
       categorized[prefix] = [];
     }
