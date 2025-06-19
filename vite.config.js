@@ -2,7 +2,8 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  base: '/KF-MegaGlass/',
+  // Use relative base so the site works on both custom domains and GitHub Pages
+  base: './',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
