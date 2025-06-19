@@ -482,10 +482,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Only run on gallery page
   if (window.location.pathname.includes('gallery')) {
     // 1. build the gallery grid
-    const grid = document.querySelector('.gallery-grid');
-    if (grid) {
-      grid.innerHTML = buildGallery();
-    }
+    const grids = document.querySelectorAll('[data-category] .gallery-grid');
+    const markup = buildGallery();
+    grids.forEach((grid) => {
+      const section = grid.closest('[data-category]');
+      const category = section ? section.getAttribute('data-category') : '';
+      grid.innerHTML = markup[category] || '';
+    });
 
     // 2. then wire up your enhancements
     initGalleryEnhancements();
