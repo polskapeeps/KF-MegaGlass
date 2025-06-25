@@ -8,3 +8,4 @@ og.*
 node_modules/
 dist/
 src/assets/gallery/
+gallery/
