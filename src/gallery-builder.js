@@ -1,6 +1,6 @@
 // gallery-builder.js
 export function buildGallery() {
-  const images = import.meta.glob('../public/assets/gallery/*.{jpg,png,webp}', {
+  const images = import.meta.glob('../assets/gallery/*.{jpg,png,webp}', {
     eager: true,
     as: 'url',
   });
