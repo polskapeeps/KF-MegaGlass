@@ -4,10 +4,10 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "build-gallery": "node gallery-builder.js",
+    "dev": "npm run build-gallery && vite",
+    "build": "npm run build-gallery && vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "deploy:clean": "gh-pages-clean && npm run deploy"
   },
@@ -35,6 +35,7 @@
     "picomatch": "^4.0.2",
     "postcss": "^8.5.4",
     "rollup": "^4.41.1",
+    "sharp": "^0.34.2",
     "source-map-js": "^1.2.1",
     "tinyglobby": "^0.2.14"
   }
