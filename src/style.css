@@ -207,7 +207,7 @@ body {
 
 /* Add your slide images here - easily customizable */
 .hero-slide:nth-child(1) {
-  background-image: url('/assets/gallery/showers_06.jpg');
+  background-image: url('/assets/gallery/showers_59.jpg');
 }
 .hero-slide:nth-child(2) {
   background-image: url('/assets/gallery/railing_04.jpg');
@@ -219,7 +219,7 @@ body {
   background-image: url('/assets/hero/shower-3.jpg');
 }
 .hero-slide:nth-child(5) {
-  background-image: url('/assets/gallery/doors_04.jpg');
+  background-image: url('/assets/gallery/showers_117.jpg');
 }
 /* Slideshow indicators (dots) with improved visibility */
 .slideshow-indicators {
