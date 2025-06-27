@@ -207,7 +207,7 @@ body {
 
 /* Add your slide images here - easily customizable */
 .hero-slide:nth-child(1) {
-  background-image: url('/assets/gallery/showers_62.jpg');
+  background-image: url('/assets/gallery/showers_06.jpg');
 }
 .hero-slide:nth-child(2) {
   background-image: url('/assets/gallery/railing_04.jpg');
