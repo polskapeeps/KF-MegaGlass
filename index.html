@@ -100,20 +100,31 @@
   <header class="glass-header fixed top-0 z-50 w-full">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-24">
-        <!-- Logo Section -->
-        <div class="flex items-center flex-shrink-0">
-          <a href="index.html" class="text-2xl font-bold text-white">
-            <div class="glass-card-nav rounded-lg px-4 py-2">
-              <img src="assets/brand-logo.png" alt="KF Megaglass Logo" class="h-12 rounded-md"
-                onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-              <div class="h-12 w-48 rounded-md items-center justify-center hidden">
-                <span class="gradient-text font-bold text-xl">KF Megaglass</span>
+        <!-- Left Side: Logo and Desktop Contact Info -->
+        <div class="flex items-center">
+          <!-- Logo Section -->
+          <div class="flex-shrink-0">
+            <a href="index.html" class="text-2xl font-bold text-white">
+              <div class="glass-card-nav rounded-lg px-4 py-2">
+                <img src="assets/brand-logo.png" alt="KF Megaglass Logo" class="h-12 rounded-md"
+                  onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="h-12 w-48 rounded-md items-center justify-center hidden">
+                  <span class="gradient-text font-bold text-xl">KF Megaglass</span>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
+
+          <!-- Desktop Contact Info (moved here, like service pages) -->
+          <div class="hidden md:flex flex-col ml-4 text-xs text-gray-300">
+            <a href="tel:2672435478" class="hover:text-white transition-colors duration-200">(267) 243-5478</a>
+            <a href="tel:2672524314" class="hover:text-white transition-colors duration-200">(267) 252-4314</a>
+            <a href="mailto:radek@kfmegaglass.com"
+              class="hover:text-white transition-colors duration-200">radek@kfmegaglass.com</a>
+          </div>
         </div>
 
-        <!-- Mobile Compact Contact Info -->
+        <!-- Mobile Compact Contact Info (unchanged) -->
         <div class="md:hidden flex flex-col items-end justify-center flex-1 mx-3">
           <div class="mobile-contact-compact text-right max-w-[120px]">
             <a href="tel:2672435478" class="mobile-contact-item">(267) 243-5478</a>
@@ -121,18 +132,10 @@
           </div>
         </div>
 
-        <!-- Desktop Elements Wrapper -->
-        <div class="hidden md:flex items-center">
-          <!-- Desktop Contact Info (from original) -->
-          <div class="flex flex-col text-xs text-gray-300">
-            <a href="tel:2672435478" class="hover:text-white transition-colors duration-200">(267) 243-5478</a>
-            <a href="tel:2672524314" class="hover:text-white transition-colors duration-200">(267) 252-4314</a>
-            <a href="mailto:radek@kfmegaglass.com"
-              class="hover:text-white transition-colors duration-200">radek@kfmegaglass.com</a>
-          </div>
-
-          <!-- Desktop Navigation (from original) -->
-          <nav class="hidden md:flex space-x-2 ml-4">
+        <!-- Right Side: Desktop Nav and Icons -->
+        <div class="flex items-center">
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex space-x-2">
             <a href="#"
               class="glass-nav-item hover-glass-nav px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200">Home</a>
             <div class="relative dropdown group">
@@ -170,8 +173,8 @@
               Us</a>
           </nav>
 
-          <!-- Desktop Social Icons (from original) -->
-          <div class="flex items-center space-x-3 ml-4">
+          <!-- Desktop Social Icons -->
+          <div class="hidden md:flex items-center space-x-3 ml-4">
             <a href="https://www.facebook.com/pages/KF-Megaglass-Shower-Enclosures/208668755897730" target="_blank"
               rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors duration-200"
               aria-label="KF Megaglass on Facebook">
@@ -191,22 +194,23 @@
               </svg>
             </a>
           </div>
-        </div>
 
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden flex items-center flex-shrink-0">
-          <button id="mobile-menu-button"
-            class="glass-nav-item hover-glass-nav p-2 rounded-lg transition-colors duration-200" aria-expanded="false"
-            aria-controls="mobile-menu">
-            <span class="sr-only">Open main menu</span>
-            <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button id="mobile-menu-button"
+              class="glass-nav-item hover-glass-nav p-2 rounded-lg transition-colors duration-200" aria-expanded="false"
+              aria-controls="mobile-menu">
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- Mobile menu (unchanged) -->
     <div id="mobile-menu" class="md:hidden hidden glass-dropdown border-t border-gray-700/30">
       <!-- Contact Info Section for Mobile -->
       <div class="border-b border-gray-700/30 py-4 px-4 space-y-2">
@@ -554,27 +558,27 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Keep your existing images but add glass styling -->
           <div class="gallery-item">
-            <img src="assets/gallery/shower-2.jpg" alt="Frameless Shower Enclosure" class="w-full h-80 object-cover"
+            <img src="assets/gallery/showers_232.jpg" alt="Frameless Shower Enclosure" class="w-full h-80 object-cover"
               loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img src="assets/gallery/shower-94.jpg" alt="Glass Door Installation" class="w-full h-80 object-cover"
+            <img src="assets/gallery/showers_248.jpg" alt="Glass Door Installation" class="w-full h-80 object-cover"
               loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img src="assets/gallery/shower-7.jpg" alt="Glass Partition System" class="w-full h-80 object-cover"
+            <img src="assets/gallery/showers_245.jpg" alt="Glass Partition System" class="w-full h-80 object-cover"
               loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img src="assets/gallery/out-door.jpg" alt="Custom Glass Railing" class="w-full h-80 object-cover"
+            <img src="assets/gallery/showers_23.jpg" alt="Custom Glass Railing" class="w-full h-80 object-cover"
               loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img src="assets/gallery/shower-5.jpg" alt="Commercial Glass Installation" class="w-full h-80 object-cover"
-              loading="lazy" />
+            <img src="assets/gallery/showers_234.jpg" alt="Commercial Glass Installation"
+              class="w-full h-80 object-cover" loading="lazy" />
           </div>
           <div class="gallery-item">
-            <img src="assets/gallery/shower-8.jpg" alt="Residential Glass Door" class="w-full h-80 object-cover"
+            <img src="assets/gallery/showers_246.jpg" alt="Residential Glass Door" class="w-full h-80 object-cover"
               loading="lazy" />
           </div>
         </div>
