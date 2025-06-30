@@ -607,11 +607,11 @@ const initGalleryUI = () => {
 };
 
 // Initialize gallery enhancements when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   if (window.location.pathname.includes('gallery')) {
     // 1. build the gallery grid
     const grids = document.querySelectorAll('[data-category] .gallery-grid');
-    const markup = buildGallery();
+    const markup = await buildGallery();
     grids.forEach((grid) => {
       const section = grid.closest('[data-category]');
       const category = section ? section.getAttribute('data-category') : '';
